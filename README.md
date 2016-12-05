@@ -11,7 +11,7 @@
 3. Create HDInsight Cluster (Linux HBase type)
   1. In the Azure portal, search with keyword "HDInsight", then HDInsight Cluster will be listed. Select it
   2. In the **New HDInsight Cluster** tab, fill in each item
-    1. In the **Cluster configuration** configuration tab, choose **Spark** as *Cluster Type*, **Linux** as *Operating System*, then click *select* ref:[https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-overview]
+    1. In the **Cluster configuration** configuration tab, choose **Spark** as *Cluster Type*, **Linux** as *Operating System*, then click *select* ref:<https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-overview>
     2. In the **Credentials** configuration tab, configure the required user name and password
     3. In the **Data Source** configuration tab, configure the Data Source. NB! Choose **From all subscriptions** (default) in the *Selection Method* dropbox, then choose the aforementioned already existing storage
 
