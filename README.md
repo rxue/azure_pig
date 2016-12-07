@@ -1,5 +1,7 @@
 # azure_pig
 
+## Environment Setup
+
 1. Create a **resource group** called *pigtest*
 
 2. Create a trial BLOB storage account
@@ -20,7 +22,13 @@
     4. In the **Pricing** configuration tab, choose the amount of nodes you intend to use
     5. In the **Resource Group** tab, choose *Use existing* and then select also *pigtest* as the resource group  
 
-4. Now that HDInsight Cluster is created, go to configure the Anaconda so that Python can have access to it
+5. Now that HDInsight Cluster is created, go to configure the Anaconda so that Python can have access to it
+  1. Run the config_anaconda.sh through **Script Actions**
+
+## Automation Solution
+* Billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute. (ref: <https://azure.microsoft.com/en-us/pricing/details/hdinsight/>)
+*
+
 
 
 
