@@ -33,6 +33,9 @@
 
 ## Automation Solution
 * Billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute. (ref: <https://azure.microsoft.com/en-us/pricing/details/hdinsight/>)
+* HDInsight cluster billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute, so you should always delete your cluster when it is no longer in use. (ref: <https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-delete-cluster>)
+
+=> The whole automation process should be done with Cluster creation and deletion 
 
 ## FAQ
 * What is *data/simple_dataset.csv* used?
