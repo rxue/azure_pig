@@ -37,11 +37,16 @@
 
 => The whole automation process should be done with Cluster creation and deletion
 
-### Azure CLI command to create an HDInsight cluster:
+### Azure CLI command to create an HDInsight cluster and run a script action:
 1. Login to Azure CLI (ref: <https://docs.microsoft.com/en-us/azure/xplat-cli-connect>) 
 2. `azure config mode arm`
 3. `azure group create azureclitest NorthEurope`
-4. 
+4. Create HDInsight cluster: <https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-cli>
+  1. Create a storage account: `azure storage account create -g azureclitest --sku-name RAGRS -l NorthEurope --kind Storage azurecliteststorage`
+  2. Retrieve the key used to access the storage `key1=$(azure storage account keys list -g azureclitest azurecliteststorage |grep key1 |awk '{print $3})`
+  3. Create HDInsight cluster: `azure hdinsight cluster create -g azureclitest -l NorthEurope -y Linux --clusterType Spark --defaultStorageAccountName azurecliteststorage.blob.core.windows.net --defaultStorageAccountKey ${key1} --defaultStorageContainer azureclitestcluster --workerNodeCount 2 --userName admin --password 1%XabcdeX%1 --sshUserName rxue --sshPassword 1%XabcdeX%1 azureclitestcluster` 
+  4. Apply a script action to a running cluster (<https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux>): `azure hdinsight script-action create configcluster -g azureclitest -n config_anaconda -u <scriptURI> -t headnode;workernode --persistOnSuccess`
+ 
 ## FAQ
 * What is *data/simple_dataset.csv* used?
   * Used for testing in Pig in local mode as a simple test case
