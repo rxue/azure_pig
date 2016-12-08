@@ -4,7 +4,7 @@
 
 1. Create a **resource group** called *pigtest*
 
-2. Create a trial BLOB storage account
+2. Create a trial **Blob storage account**
   1. Go to link: <https://azure.microsoft.com/en-us/offers/ms-azr-0044p/> to register/create a free trial account
   2. After registration, click the **Storage accounts** to create a new storage account. Give it a name, e.g. *pigteststorage*. Then choose **locally-redundant storage (LRS)** as the *Type* for simplicity reason, other settings are kept as default.
   3. Choose *existing* in the **Resource group** field, then select the created *pigtest* from the dropdown list
@@ -13,7 +13,7 @@
   1. Go to the created storage account, Create a **Container**: Click **Blobs** from the **Services**, then click **+** icon to create a container, e.g. with name *sources*, *Private* (default) as **Access type** 
   2. Upload the script and the csv dataset to the created container
 
-4. Create HDInsight Cluster
+4. Create **HDInsight Cluster**
   1. In the Azure portal, search with keyword "HDInsight", then HDInsight Cluster will be listed. Select it
   2. In the **New HDInsight Cluster** tab, fill in each item
     1. In the **Cluster configuration** configuration tab, choose **Spark** as *Cluster Type*, **Linux** as *Operating System*, then click *select*. (NB! The HBase system doesnot contain Anaconda, ref:<https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-overview>)
