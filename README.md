@@ -33,7 +33,10 @@
 
 ## Automation Solution
 * Billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute. (ref: <https://azure.microsoft.com/en-us/pricing/details/hdinsight/>)
-*
+
+## FAQ
+* What is *data/simple_dataset.csv* used?
+  * Used for testing in Pig in local mode as a simple test case
 
 
 
