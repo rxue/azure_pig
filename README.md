@@ -25,6 +25,12 @@
 5. Now that HDInsight Cluster is created, go to configure the Anaconda so that Python can have access to it
   1. Run the config_anaconda.sh through **Script Actions**
 
+## DEMO Introduction
+* **Script action**: config_anaconda.sh
+* Scripts run in the demo: 
+** *src/aggregate_by_single_grouped.pig**
+** *src/aggregate_by_single_grouped.py**
+
 ## Automation Solution
 * Billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute. (ref: <https://azure.microsoft.com/en-us/pricing/details/hdinsight/>)
 *
