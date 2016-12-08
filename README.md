@@ -37,7 +37,7 @@
 
 => The whole automation process should be done with Cluster creation and deletion
 
-Azure CLI command to create an HDInsight cluster:
+### Azure CLI command to create an HDInsight cluster:
 1. `azure group create azureclitest NorthEurope`
 
 ## FAQ
