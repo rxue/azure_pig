@@ -27,7 +27,7 @@
 
 ## DEMO Introduction
 * **Script Action**: config_anaconda.sh
-* Scripts run in the demo: 
+* Scripts to run in the demo: 
   * *src/aggregate_by_single_grouped.pig*
   * *src/aggregate_by_single_grouped.py*
 
