@@ -28,8 +28,8 @@
 ## DEMO Introduction
 * **Script Action**: config_anaconda.sh
 * Scripts run in the demo: 
-..* *src/aggregate_by_single_grouped.pig*
-..* *src/aggregate_by_single_grouped.py**
+  * *src/aggregate_by_single_grouped.pig*
+  * *src/aggregate_by_single_grouped.py*
 
 ## Automation Solution
 * Billing starts once a cluster is created and stops when the cluster is deleted and is pro-rated per minute. (ref: <https://azure.microsoft.com/en-us/pricing/details/hdinsight/>)
