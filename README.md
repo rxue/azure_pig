@@ -38,8 +38,10 @@
 => The whole automation process should be done with Cluster creation and deletion
 
 ### Azure CLI command to create an HDInsight cluster:
-1. `azure group create azureclitest NorthEurope`
-
+1. Login to Azure CLI (ref: <https://docs.microsoft.com/en-us/azure/xplat-cli-connect>) 
+2. `azure config mode arm`
+3. `azure group create azureclitest NorthEurope`
+4. 
 ## FAQ
 * What is *data/simple_dataset.csv* used?
   * Used for testing in Pig in local mode as a simple test case
