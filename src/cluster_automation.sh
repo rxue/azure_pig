@@ -24,5 +24,6 @@ script_action_uri="https://${storage_account_name}.blob.core.windows.net/${conta
 # ref: https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux
 azure hdinsight script-action create ${cluster_name} -g ${resource_group} -n config -u ${script_action_uri} -t headnode --persistOnSuccess
 azure hdinsight script-action create ${cluster_name} -g ${resource_group} -n config -u ${script_action_uri} -t workernode --persistOnSuccess
-ssh rxue@${cluster_name}-ssh.azurehdinsight.net 'pig -param container='${container_name}' -param storage_name='${storage_account_name}' wasb://'${container_name}'@'${storage_account_name}'.blob.core.windows.net/aggregate_by_single_grouped.pig'
+timestmp=$(date +"%Y%m%d")
+ssh rxue@${cluster_name}-ssh.azurehdinsight.net 'pig -param container='${container_name}' -param storage_name='${storage_account_name}' -param timestmp='${timestmp}' wasb://'${container_name}'@'${storage_account_name}'.blob.core.windows.net/aggregate_by_single_grouped.pig'
 #azure hdinsight cluster delete ${cluster_name}
